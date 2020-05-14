@@ -10,7 +10,7 @@ class BooksController extends Controller
     /**
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function Store()
+    public function store()
     {
         $book = Book::create($this->validateRequest());
 
@@ -47,7 +47,7 @@ class BooksController extends Controller
     {
         return request()->validate([
             'title' => 'required',
-            'author' => 'required'
+            'author_id' => 'required'
         ]);
     }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
-    protected $fillable = ['name', 'dob'];
+    protected $guarded = [];
 
     protected $dates = ['dob'];
 
